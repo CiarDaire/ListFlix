@@ -32,7 +32,7 @@ export default function App() {
         <Stack.Screen name='DiscoverFilm' component={DiscoverFilm} />
         <Stack.Screen name='CreateList' component={CreateList} />
         <Stack.Screen name='IndexItem' component={TopBar} options={{title: ''}} />
-        <Stack.Screen name='MyListOne' component={MyListOne} />
+        <Stack.Screen name='MyListOne' component={MyListOne} options={({ route }) => ({ title: route.params.listName })} />
       </Stack.Navigator>
     </NavigationContainer> 
   );
