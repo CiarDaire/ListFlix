@@ -1,14 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import * as SQLite from 'expo-sqlite'
 
-const SQLDatabase = () => {
-  return (
-    <View>
-      <Text>SQLDatabase</Text>
-    </View>
-  )
+export const DatabaseConnection ={
+    getConnection:()=>SQLite.openDatabase('database.db')
 }
-
-export default SQLDatabase
-
-const styles = StyleSheet.create({})
