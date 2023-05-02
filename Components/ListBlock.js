@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { List } from 'react-native-paper'
 
-const ListBlock = () => {
+const ListBlock = ({listName, listDesc}) => {
   return (
-    <View>
-      <Text>ListBlock</Text>
-    </View>
+    <List.Item
+        title={listName}
+        description={listDesc}
+        left={props => <List.Icon {...props} icon="folder" />}
+    />
   )
 }
 
