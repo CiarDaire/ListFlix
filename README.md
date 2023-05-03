@@ -1,5 +1,11 @@
 # ListFlix
-App to create custom lists out of tv shows and films. React Native Expo SQLite Application.
+Mobile app to create custom lists out of tv shows and films. React Native Expo SQLite Application.
+--
+
+To run:
+
+Open the terminal and run 'npx expo start', and then open it on an Expo app on your device.
+
 --
 This was for university project. It is more of a starting foundation than a fully developed application.
 
