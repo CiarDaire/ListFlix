@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import { AppRegistry } from 'react-native';
 
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -21,7 +20,7 @@ const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 const Top = createMaterialTopTabNavigator();
 
-export default function App() {
+function App() {
 
   return (
     <NavigationContainer>
@@ -80,3 +79,7 @@ function BottomBar() {
     </Tab.Navigator>
   )
 }
+
+AppRegistry.registerComponent('main', () => App);
+
+export default App;
