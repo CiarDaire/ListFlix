@@ -28,9 +28,9 @@ const Login = ({navigation}) => {
     db.transaction(function (tx) {
       tx.executeSql(
         `INSERT INTO user_accounts (user_id, emailAddress) VALUES (?, ?)`,
-        [loggedInUserId, email],
+        [userID, email],
         (tx, results) => {
-          console.log('User has been created! Under id number', loggedInUserId, 'and email', email)
+          console.log('User has been created! Under id number', userID, 'and email', email)
         }
       )
     })

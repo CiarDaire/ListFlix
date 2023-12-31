@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, LogBox } from 'react-native';
 
 import Login from './pages/Login';
 import Home from './pages/Home';
@@ -80,6 +80,7 @@ function BottomBar() {
   )
 }
 
+LogBox.ignoreAllLogs();
 AppRegistry.registerComponent('main', () => App);
 
 export default App;
